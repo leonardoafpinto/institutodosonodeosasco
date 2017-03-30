@@ -1,0 +1,51 @@
+extends layout
+
+block content
+	section#slider-sec.slider-reg
+		.main-flex-slider
+			ul.slides
+				li
+					figure
+						img(src="/images/familia.jpeg")
+						figcaption.slider-overlay
+							.slider-text.animated.fadeInDown
+								h1 Paixão pela medicina
+				li
+					figure
+						img(src="/images/bg-2.jpg")
+						figcaption.slider-overlay
+							.slider-text
+								h1 Durma melhor
+								h2 E viva com mais intensidade
+				li
+					figure
+						img(src="/images/img-4.jpg")
+						figcaption.slider-overlay
+							.slider-text
+								h1 Agende seu exame online
+								p.slide-btn
+									a(href="/agendamento-online" target="_blank" class="btn btn-white btn-lg")
+										i(class="fa fa-calendar")
+	.space-50
+	.container
+		.row.intro-row
+			.col-md-12.text-center.wow.animated.fadeInUp
+				h2 Pioneiros na Baixada Santista a fazer o exame de polissonografia
+				br
+				h4 Nossos serviços
+			.space-70
+			.col-md-4.col-sm-12
+				.services-box.wow.animated.fadeInLeft("data-wow-delay"="0.3s")
+					i.fa.fa-user-md
+					h1 Consultas neurológicas
+			.col-md-4.col-sm-12
+				.services-box.wow.animated.fadeInLeft("data-wow-delay"="0.5s")
+					i.fa.fa-bed
+					h1 Exame de polissonografia
+			.col-md-4.col-sm-12
+				.services-box.wow.animated.fadeInLeft("data-wow-delay"="0.7s")
+					i.fa.fa-home
+					h1 Exame de polissonografia domiciliar
+	.space-70
+
+	include footer.pug

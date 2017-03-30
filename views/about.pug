@@ -1,0 +1,62 @@
+extends layout
+
+block title
+  title Instituto do sono de Santos - Quem somos
+
+block description
+  meta(name="description", content="Pioneiros na Baixada Santista a fazer o exame, diagnosticar e tratar os distúrbios do sono. Venha nos conhecer.")
+
+block content
+  section#content-region-3.padding-40.page-tree-bg
+    .container
+      h3.page-tree-text
+        | Quem somos
+  .space-70
+  .container
+    .row
+      .col-md-6
+        h4.heading-mini Sobre o Instituto do Sono de Santos
+        p.text-justify
+          | Somos os pioneiros na Baixada Santista a fazer o exame, diagnosticar e tratar os distúrbios do sono. Para isso contamos com equipe capacitada, técnica e cientificamente, para dar-lhe assistência na realização e tratamento médico.
+        p.text-justify
+          | Esperamos ajudá-lo pois nosso objetivo maior é que volte a ter uma boa noite de sono, devolvendo-lhe a satisfação e o prazer de dormir para que tenha um dia produtivo de qualidade e grandes realizações.
+        br/
+        h4.heading-mini Histórico do Instituto do Sono de Santos
+        p.text-justify
+          | Criado em 2001, atendemos diversos convênios médicos, na área de doenças neurológicas e distúrbios do sono, como:
+          ul.icon-list.list-unstyled
+            each disturbio in ['Ronco', 'Apnéia', 'Hipopnéia', 'Sonambulismo', 'Narcolepsia', 'Insônia', 'Bruxismo', 'Síndrome das pernas inquietas', 'Entre Outros']
+              li
+                i.ion-checkmark-round
+                = disturbio
+      .col-md-6
+        .flexslider
+          ul.slides
+            li
+              img(src="/images/exame.jpg" class="img-responsive")
+            li
+              img(src="/images/blog-1.jpg" class="img-responsive")
+    .space-70
+    .row
+      .col-md-6
+        .flexslider
+          ul.slides
+            li
+              img(src="/images/faustino-pacheco.jpg" class="img-responsive")
+      .col-md-6
+        h4.heading-mini Dr. Faustino Pacheco
+        ul.icon-list.list-unstyled
+          li.text-justify
+            i.ion-checkmark-round
+            | Neurocirurgião formado pela Sociedade Brasileira de Neurocirurgia com atualização em Montreal (Canadá) e na Columbia University New York
+          li.text-justify
+            i.ion-checkmark-round
+            | Foi professor da cadeira de Neurologia da Faculdade de Ciências Médicas da Fundação Lusíada – Santos
+          li.text-justify
+            i.ion-checkmark-round
+            | Diretor Técnico responsável pelo Instituto do Sono de Santos.
+        p.text-justify
+          | Com 49 anos foi acometido de um AVC (acidente vascular cerebral), enquanto dormia, em 15 de outubro de 2000. Teve uma recuperação difícil devido a gravidade do quadro. Nesta fase de recuperação, foi pedido um exame de polissonografia, o qual foi feito em São Paulo devido não haver este tipo de exame em Santos.  Foi diagnosticado como sendo um paciente de SAHOS, Síndrome da Apnéia e Hipopnéia Obstrutiva do Sono. Iniciou o tratamento com o uso de CPAP. Na época pouco se falava dos distúrbios do sono, pouco se sabia a respeito das doenças do sono e, consequentemente, sobre seu tratamento. Vislumbrando poder atuar como médico em um novo ramo da medicina, visto que como neurocirurgião não poderia mais devido as sequelas do AVC, vendo a carência deste profissional em nossa cidade, foi estudar sono, objetivando atender o maior número de pessoas que também sofrem com estes distúrbios. Foi quando surgiu o Instituto Do Sono De Santos. Fomos os pioneiros a exercer esta nova especialidade da medicina. Dr Pacheco vem atuando na área de neurologia e medicina do sono desde 2001 buscando atender e tratar todos os que sofrem de problemas relacionados ao sono.
+  .space-70
+
+  include footer.pug

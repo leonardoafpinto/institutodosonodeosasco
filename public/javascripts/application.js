@@ -1,0 +1,12 @@
+//= require jquery
+//= require jquery_ujs
+//= require modernizr.custom.97074
+//= require bootstrap.min
+//= require jquery.easing.1.3.min
+//= require bootstrap-hover-dropdown.min
+//= require jquery.sticky
+//= require jquery.flexslider-min
+//= require jquery.mixitup.min
+//= require parallax.min
+//= require wow.min
+//= require app

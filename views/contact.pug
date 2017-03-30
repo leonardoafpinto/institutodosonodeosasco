@@ -1,0 +1,65 @@
+extends layout
+
+block title
+  title Instituto do sono de Santos - Fale Conosco
+
+block description
+  meta(name="description", content="Fale conosco através dos nossos canais de contato, telefone ou e-mail, ou agende um exame online.")
+
+block content
+  section#content-region-3.padding-40.page-tree-bg
+    .container
+      h3.page-tree-text Fale Conosco
+  #map-canvas
+  .space-70
+  .container
+    .col-md-12
+      h4.heading-mini Entre em contato conosco
+      p Av Afonso Pena, 180 Cjs 31 à 34
+      p Embaré - CEP 11020-000
+      p Santos - SP
+      p Telefone: +55 13 3273-3232
+      p
+        | Email:
+        a(href="mailto: institutoneurologicas@uol.com.br") institutoneurologicas@uol.com.br
+  .space-70
+
+  include footer.pug
+
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfGCggGmjSczde1a-KyZZ_lRUE0uqYrlM&sensor=true" type="text/javascript")
+
+  script.
+    var myLatlng;
+    var map;
+    var marker;
+
+    function initialize() {
+        myLatlng = new google.maps.LatLng(-23.9618759, -46.318126,17);
+
+        var mapOptions = {
+            zoom: 16,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            draggable: false
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var contentString = '<p style="line-height: 20px;"><strong>Instituto do Sono de Santos</strong></p><p>Av Afonso Pena, 180 Cjs 31 à 34, Santos - SP</p><p>Embaré - CEP 11020-000</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Marker'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);

@@ -1,0 +1,21 @@
+header.header-main
+	.navbar.navbar-default.yamm(role="navigation")
+		.container
+			.navbar-header
+				button.navbar-toggle("data-target"=".navbar-collapse" "data-toggle"="collapse" type="button")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a(href='/' class='navbar-brand')
+					img(href='/' src="/images/logo-instituto.png" width=177 height=40 class='img-responsive')
+			.navbar-collapse.collapse
+				ul.nav.navbar-nav.navbar-right
+					li(class=(path == '/') ? 'active' : '')
+						li: a(href="/") Home
+					li(class=(path == '/quem-somos') ? 'active' : '')
+						li: a(href="/quem-somos") Quem somos
+					li
+						li: a(href="/agendamento-online" target="_blank") Agendamento online
+					li(class=(path == '/fale-conosco') ? 'active' : '')
+						li: a(href="/fale-conosco") Fale conosco
